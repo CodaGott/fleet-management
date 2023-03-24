@@ -21,6 +21,8 @@ public class Person {
     private String initials;
     private String gender;
     private String maritalStatus;
+    @JoinColumn(name = "address")
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Address address;
     private LocalDate dateOfBirth;
     private String mobileNo;

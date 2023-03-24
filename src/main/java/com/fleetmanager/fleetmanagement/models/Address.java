@@ -2,8 +2,16 @@ package com.fleetmanager.fleetmanagement.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.*;
+import org.hibernate.Hibernate;
+
+import java.util.Objects;
 
 @Entity
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
 public class Address {
     @Id
     private Long id;
@@ -12,4 +20,17 @@ public class Address {
     private String address;
     private String country;
     private String zipCode;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        Address address = (Address) o;
+        return id != null && Objects.equals(id, address.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }
