@@ -1,4 +1,4 @@
-package com.fleetmanager.fleetmanagement.services;
-
-public interface SupplierService {
-}
+//package com.fleetmanager.fleetmanagement.services;
+//
+//public interface SupplierService {
+//}

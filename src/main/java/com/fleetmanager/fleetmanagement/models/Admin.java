@@ -1,4 +1,4 @@
-package com.fleetmanager.fleetmanagement.models;
-
-public class Admin {
-}
+//package com.fleetmanager.fleetmanagement.models;
+//
+//public class Admin {
+//}

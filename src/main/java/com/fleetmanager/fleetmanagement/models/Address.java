@@ -1,6 +1,8 @@
 package com.fleetmanager.fleetmanagement.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 import org.hibernate.Hibernate;
@@ -13,7 +15,7 @@ import java.util.Objects;
 @ToString
 @RequiredArgsConstructor
 public class Address {
-    @Id
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String state;
     private String city;
